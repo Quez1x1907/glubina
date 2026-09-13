@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#eaf6f6">
+  <title>Каталог обитателей — ГЛУБИНА</title>
+  <meta name="description" content="Каталог обитателей океанариума «Глубина»: живой поиск по названиям и фактам, фильтры по зонам и типам.">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="bubbles" aria-hidden="true"></div>
+
+  <header class="head">
+    <a class="head__logo" href="index.html"><img src="assets/favicon.svg" alt="">Глубина<i>/</i>океанариум</a>
+    <nav class="head__nav" aria-label="Разделы">
+      <a href="index.html">Сегодня</a>
+      <a href="catalog.html">Каталог</a>
+      <a href="zones.html">Зоны</a>
+      <a href="route.html">Маршрут</a>
+      <a href="tickets.html">Билеты</a>
+      <a href="about.html">О нас</a>
+    </nav>
+    <a class="btn btn--coral head__cta" href="tickets.html">Купить билет</a>
+  </header>
+
+  <nav class="tabbar" aria-label="Навигация">
+    <a href="index.html"><span class="ticon" style="background:#2a9df4;color:#fff">С</span>Сегодня</a>
+    <a href="catalog.html"><span class="ticon" style="background:#ff6b57;color:#fff">К</span>Каталог</a>
+    <a href="zones.html"><span class="ticon" style="background:#3d3a6d;color:#fff">З</span>Зоны</a>
+    <a href="route.html"><span class="ticon" style="background:#0b1d3a;color:#fff">М</span>Маршрут</a>
+    <a href="tickets.html"><span class="ticon" style="background:#f7d488;color:#0b1d3a">Б</span>Билеты</a>
+  </nav>
+
+  <main>
+    <section class="pagehead">
+      <div class="wrap">
+        <span class="label rv">Каталог<i>/</i>живой поиск</span>
+        <h1 class="h1 rv" data-d="1">Двенадцать жителей <em>и их истории</em></h1>
+        <p class="lead rv" data-d="2">Ищи по имени, латинскому названию или слову из факта. Фильтры — по зоне глубины и типу. Каждая карточка — ссылка на подробную страницу.</p>
+      </div>
+    </section>
+
+    <section class="sec tight">
+      <div class="wrap">
+        <div class="searchrow rv">
+          <div class="searchbox">
+            <span class="mag">🔍</span>
+            <input id="searchInput" type="text" placeholder="Найди осьминога, риф или слово «скальпель»…" autocomplete="off">
+          </div>
+        </div>
+        <div class="filterbar" id="zoneChips">
+          <button class="chip is-active" data-f="all" type="button">Все зоны</button>
+          <button class="chip" data-f="surface" type="button">Поверхность</button>
+          <button class="chip" data-f="reef" type="button">Риф</button>
+          <button class="chip" data-f="twilight" type="button">Сумеречная</button>
+          <button class="chip" data-f="deep" type="button">Бездна</button>
+        </div>
+        <div class="filterbar" id="typeChips">
+          <button class="chip is-active" data-f="all" type="button">Все типы</button>
+          <button class="chip" data-f="Рыба" type="button">Рыбы</button>
+          <button class="chip" data-f="Моллюск" type="button">Моллюски</button>
+          <button class="chip" data-f="Хрящевые" type="button">Хрящевые</button>
+          <button class="chip" data-f="Рептилия" type="button">Рептилии</button>
+          <button class="chip" data-f="Ракообразное" type="button">Ракообразные</button>
+          <button class="chip" data-f="Кишечнополостное" type="button">Кишечнополостные</button>
+        </div>
+
+        <div class="creatures" id="creatures"></div>
+        <div class="empty" id="emptyBox" hidden>Такого в наших водах нет — попробуй «рифа» или «медузу».</div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer__grid">
+        <div>
+          <p class="footer__brand">Глубина<i>/</i>океанариум</p>
+          <p class="footer__about">Три этажа воды в центре города. Мы показываем обитателей так, как они живут: по глубинам, без яркого света и с именами.</p>
+        </div>
+        <div class="footer__col">
+          <h4>Часы</h4>
+          <p>вт–вс / 10:00–20:00</p>
+          <p>пн / технический день</p>
+          <p>касса / до 19:30</p>
+        </div>
+        <div class="footer__col">
+          <h4>Разделы</h4>
+          <a href="index.html">Сегодня</a>
+          <a href="zones.html">Зоны</a>
+          <a href="route.html">Маршрут</a>
+          <a href="tickets.html">Билеты</a>
+        </div>
+      </div>
+      <div class="footer__meta">
+        <span>Океанариум «Глубина»<i>/</i>[город]</span>
+        <span>© MMXXVI<i>/</i>всё вымышлено</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="data/creatures.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

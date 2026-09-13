@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#eaf6f6">
+  <title>Маршрут — ГЛУБИНА</title>
+  <meta name="description" content="Маршрут по залам океанариума «Глубина»: от поверхности до бездны, с планом и чек-листом того, что нельзя пропустить.">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="bubbles" aria-hidden="true"></div>
+
+  <header class="head">
+    <a class="head__logo" href="index.html"><img src="assets/favicon.svg" alt="">Глубина<i>/</i>океанариум</a>
+    <nav class="head__nav" aria-label="Разделы">
+      <a href="index.html">Сегодня</a>
+      <a href="catalog.html">Каталог</a>
+      <a href="zones.html">Зоны</a>
+      <a href="route.html">Маршрут</a>
+      <a href="tickets.html">Билеты</a>
+      <a href="about.html">О нас</a>
+    </nav>
+    <a class="btn btn--coral head__cta" href="tickets.html">Купить билет</a>
+  </header>
+
+  <nav class="tabbar" aria-label="Навигация">
+    <a href="index.html"><span class="ticon" style="background:#2a9df4;color:#fff">С</span>Сегодня</a>
+    <a href="catalog.html"><span class="ticon" style="background:#ff6b57;color:#fff">К</span>Каталог</a>
+    <a href="zones.html"><span class="ticon" style="background:#3d3a6d;color:#fff">З</span>Зоны</a>
+    <a href="route.html"><span class="ticon" style="background:#0b1d3a;color:#fff">М</span>Маршрут</a>
+    <a href="tickets.html"><span class="ticon" style="background:#f7d488;color:#0b1d3a">Б</span>Билеты</a>
+  </nav>
+
+  <main>
+    <section class="pagehead">
+      <div class="wrap">
+        <span class="label rv">Маршрут<i>/</i>сверху вниз, без разворотов</span>
+        <h1 class="h1 rv" data-d="1">Сорок минут <em>погружения</em></h1>
+        <p class="lead rv" data-d="2">Схема простая: вход — поверхность — риф — сумеречная зона — бездна — выход через кафетерий. Назад возвращаться не нужно.</p>
+      </div>
+    </section>
+
+    <section class="sec tight">
+      <div class="wrap">
+        <figure class="routeimg rv">
+          <img src="assets/route.png" alt="Схема залов: вход, четыре зоны глубин и выход через кафетерий">
+          <figcaption class="mapband__meta" style="border:none; border-top: 1.5px solid var(--line); padding: 14px 6px 4px;">
+            <span class="label">вход<i>/</i>первый этаж</span>
+            <span class="label">залы<i>/</i>по часовой стрелке</span>
+            <span class="label">выход<i>/</i>кафетерий</span>
+          </figcaption>
+        </figure>
+
+        <div class="sec__head" style="margin-top: 70px;">
+          <div>
+            <span class="label rv">Чек-лист<i>/</i>что не пропустить</span>
+            <h2 class="h2 rv" data-d="1">Три точки <em>и один секрет</em></h2>
+          </div>
+        </div>
+        <div class="checklist">
+          <div class="check rv">
+            <span class="check__n">01</span>
+            <p>Кормление в 12:00 <span>зал «Риф»: очередь занимает десять минут, лучше прийти заранее</span></p>
+          </div>
+          <div class="check rv" data-d="1">
+            <span class="check__n">02</span>
+            <p>Тёмный коридор сумеречной зоны <span>глаза привыкают за две минуты — не торопись</span></p>
+          </div>
+          <div class="check rv" data-d="2">
+            <span class="check__n">03</span>
+            <p>Большое стекло бездны <span>самый большой аквариум: скаты проходят в двадцати сантиметрах</span></p>
+          </div>
+        </div>
+        <p class="footnote rv" data-d="3" style="margin-top: 24px;">Секрет<i>/</i>дежурный биолог у бездны отвечает на любые вопросы после 18:00</p>
+      </div>
+    </section>
+
+    <div class="ctaband" style="background: var(--deep); border-radius: var(--r) var(--r) 0 0;">
+      <div class="wrap">
+        <h2 class="h2" style="color:#fff">Готов погружаться — <em style="color:var(--sand)">билет уже ждёт</em></h2>
+        <a class="btn btn--white" href="tickets.html"><span>К билетам</span><em class="btn__arrow">→</em></a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer" style="border-radius:0;">
+    <div class="wrap">
+      <div class="footer__grid">
+        <div>
+          <p class="footer__brand">Глубина<i>/</i>океанариум</p>
+          <p class="footer__about">Три этажа воды в центре города. Мы показываем обитателей так, как они живут: по глубинам, без яркого света и с именами.</p>
+        </div>
+        <div class="footer__col">
+          <h4>Часы</h4>
+          <p>вт–вс / 10:00–20:00</p>
+          <p>пн / технический день</p>
+          <p>касса / до 19:30</p>
+        </div>
+        <div class="footer__col">
+          <h4>Разделы</h4>
+          <a href="index.html">Сегодня</a>
+          <a href="catalog.html">Каталог</a>
+          <a href="zones.html">Зоны</a>
+          <a href="about.html">О нас</a>
+        </div>
+      </div>
+      <div class="footer__meta">
+        <span>Океанариум «Глубина»<i>/</i>[город]</span>
+        <span>© MMXXVI<i>/</i>всё вымышлено</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="data/creatures.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

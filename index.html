@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#eaf6f6">
+  <title>ГЛУБИНА — океанариум: сегодня, каталог, билеты</title>
+  <meta name="description" content="Океанариум «Глубина»: три этажа воды, двенадцать видов, кормления каждый день. Каталог обитателей, маршрут и билеты.">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="bubbles" aria-hidden="true"></div>
+
+  <header class="head">
+    <a class="head__logo" href="index.html"><img src="assets/favicon.svg" alt="">Глубина<i>/</i>океанариум</a>
+    <nav class="head__nav" aria-label="Разделы">
+      <a href="index.html">Сегодня</a>
+      <a href="catalog.html">Каталог</a>
+      <a href="zones.html">Зоны</a>
+      <a href="route.html">Маршрут</a>
+      <a href="tickets.html">Билеты</a>
+      <a href="about.html">О нас</a>
+    </nav>
+    <a class="btn btn--coral head__cta" href="tickets.html">Купить билет</a>
+  </header>
+
+  <nav class="tabbar" aria-label="Навигация">
+    <a href="index.html"><span class="ticon" style="background:#2a9df4;color:#fff">С</span>Сегодня</a>
+    <a href="catalog.html"><span class="ticon" style="background:#ff6b57;color:#fff">К</span>Каталог</a>
+    <a href="zones.html"><span class="ticon" style="background:#3d3a6d;color:#fff">З</span>Зоны</a>
+    <a href="route.html"><span class="ticon" style="background:#0b1d3a;color:#fff">М</span>Маршрут</a>
+    <a href="tickets.html"><span class="ticon" style="background:#f7d488;color:#0b1d3a">Б</span>Билеты</a>
+  </nav>
+
+  <main class="hero">
+    <div class="wrap">
+      <div>
+        <span class="label rv">Океанариум<i>/</i>[город]<i>/</i>вт–вс 10:00–20:00</span>
+        <h1 class="h1 hero__title rv" data-d="1">Три этажа воды <em>и двенадцать имён</em></h1>
+        <p class="lead hero__lead rv" data-d="2">Поверхность, риф, сумеречная зона и бездна — маршрут идёт сверху вниз, как настоящее погружение. Каждую зону населяют свои жители, и у каждой есть имя.</p>
+        <div class="hero__actions rv" data-d="3">
+          <a class="btn btn--coral" href="catalog.html"><span>Открыть каталог</span><em class="btn__arrow">→</em></a>
+          <a class="btn btn--white" href="route.html"><span>Построить маршрут</span></a>
+        </div>
+        <div style="margin-top: 26px;"><span class="status" id="openStatus"><span class="dot"></span> …</span></div>
+      </div>
+      <div class="hero__card rv" data-d="2">
+        <img src="assets/water.png" alt="Вода с пузырями и волнами">
+        <div class="hero__card-row">
+          <b class="h3">Расписание кормлений</b>
+          <span class="label">каждый день</span>
+        </div>
+        <div class="feed" id="feedBox"></div>
+      </div>
+    </div>
+  </main>
+
+  <section class="sec">
+    <div class="wrap">
+      <div class="sec__head">
+        <div>
+          <span class="label rv">Куда сходить<i>/</i>внутри</span>
+          <h2 class="h2 rv" data-d="1">Четыре двери <em>и один маршрут</em></h2>
+        </div>
+        <a class="btn btn--white rv" data-d="2" href="route.html"><span>Маршрут по залам</span><em class="btn__arrow">→</em></a>
+      </div>
+      <div class="tiles">
+        <a class="tile rv" href="catalog.html">
+          <span class="tile__emoji" style="background:var(--aqua-2)">🐠</span>
+          <h3 class="h3">Каталог обитателей</h3>
+          <p>Двенадцать видов с именами, характерами и карточками: размер, глубина, рацион и один факт, который удивит.</p>
+          <span class="tile__go">Искать в каталоге <em>→</em></span>
+        </a>
+        <a class="tile rv" data-d="1" href="zones.html">
+          <span class="tile__emoji" style="background:#ffe3dc">🪸</span>
+          <h3 class="h3">Четыре зоны</h3>
+          <p>От солнечной поверхности до бездны: у каждой зоны свой цвет, своя вода и свои соседи по стеклу.</p>
+          <span class="tile__go">К зонам <em>→</em></span>
+        </a>
+        <a class="tile rv" data-d="2" href="friday.html">
+          <span class="tile__emoji" style="background:#d9e6fb">🎟️</span>
+          <h3 class="h3">Билеты и правила</h3>
+          <p>Один билет — на все залы. Дети до шести лет — бесплатно, кормления уже включены.</p>
+          <span class="tile__go">К билетам <em>→</em></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer__grid">
+        <div>
+          <p class="footer__brand">Глубина<i>/</i>океанариум</p>
+          <p class="footer__about">Три этажа воды в центре города. Мы показываем обитателей так, как они живут: по глубинам, без яркого света и с именами.</p>
+        </div>
+        <div class="footer__col">
+          <h4>Часы</h4>
+          <p>вт–вс / 10:00–20:00</p>
+          <p>пн / технический день</p>
+          <p>касса / до 19:30</p>
+        </div>
+        <div class="footer__col">
+          <h4>Разделы</h4>
+          <a href="catalog.html">Каталог</a>
+          <a href="zones.html">Зоны</a>
+          <a href="route.html">Маршрут</a>
+          <a href="tickets.html">Билеты</a>
+        </div>
+      </div>
+      <div class="footer__meta">
+        <span>Океанариум «Глубина»<i>/</i>[город]</span>
+        <span>© MMXXVI<i>/</i>всё вымышлено</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="data/creatures.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
