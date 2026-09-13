@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#eaf6f6">
-  <title>Зоны глубины — ГЛУБИНА</title>
-  <meta name="description" content="Четыре зоны океанариума «Глубина»: поверхность, риф, сумеречная зона и бездна — со своими обитателями и водой.">
+  <title>Дневник биолога — ГЛУБИНА</title>
+  <meta name="description" content="Дневник биолога океанариума «Глубина»: записи о кавитации креветки-богомола, детях морского конька и маршрутах скатов.">
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -40,15 +40,25 @@
   <main>
     <section class="pagehead">
       <div class="wrap">
-        <span class="label rv">Зоны<i>/</i>сверху вниз</span>
-        <h1 class="h1 rv" data-d="1">Чем глубже — <em>тем тише</em></h1>
-        <p class="lead rv" data-d="2">Маршрут океанариума повторяет настоящее погружение: каждая зона холоднее, темнее и медленнее предыдущей. Внутри — свои жильцы.</p>
+        <span class="label rv">Дневник биолога<i>/</i>лето — осень 2026</span>
+        <h1 class="h1 rv" data-d="1">Записи <em>из-за стекла</em></h1>
+        <p class="lead rv" data-d="2">Наша команда биологов записывает всё необычное, что видит в залах. Публикуем целиком — вместе с наблюдениями, которые пока не объяснены.</p>
       </div>
     </section>
 
     <section class="sec tight">
-      <div class="wrap zones" id="zonesRoot"></div>
+      <div class="wrap">
+        <div class="journal-tags" id="journalTags"></div>
+        <div id="journalList"></div>
+      </div>
     </section>
+
+    <div class="ctaband">
+      <div class="wrap">
+        <h2 class="rv">Заметил что-то необычное <em>у стекла — расскажи нам</em></h2>
+        <a class="btn btn--white rv" data-d="1" href="catalog.html"><span>Сначала — каталог</span><em class="btn__arrow">→</em></a>
+      </div>
+    </div>
   </main>
 
   <footer class="footer">
@@ -68,12 +78,9 @@
           <h4>Разделы</h4>
           <a href="index.html">Сегодня</a>
           <a href="catalog.html">Каталог</a>
-          <a href="route.html">Маршрут</a>
-          <a href="tickets.html">Билеты</a>
-        
-          <a class="gap" href="quiz.html">Квиз «Кто ты»</a>
-          <a class="gap" href="journal.html">Дневник биолога</a>
-          <a class="gap" href="compare.html">Сравнить</a></div>
+          <a href="compare.html">Сравнить</a>
+          <a href="quiz.html">Квиз</a>
+        </div>
       </div>
       <div class="footer__meta">
         <span>Океанариум «Глубина»<i>/</i>[город]</span>
@@ -83,6 +90,7 @@
   </footer>
 
   <script src="data/creatures.js"></script>
+  <script src="data/journal.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

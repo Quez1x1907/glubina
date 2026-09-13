@@ -41,7 +41,7 @@
     <section class="pagehead">
       <div class="wrap">
         <span class="label rv">Каталог<i>/</i>живой поиск</span>
-        <h1 class="h1 rv" data-d="1">Двенадцать жителей <em>и их истории</em></h1>
+        <h1 class="h1 rv" data-d="1">Двадцать жителей <em>и их истории</em></h1>
         <p class="lead rv" data-d="2">Ищи по имени, латинскому названию или слову из факта. Фильтры — по зоне глубины и типу. Каждая карточка — ссылка на подробную страницу.</p>
       </div>
     </section>
@@ -70,6 +70,13 @@
           <button class="chip" data-f="Ракообразное" type="button">Ракообразные</button>
           <button class="chip" data-f="Кишечнополостное" type="button">Кишечнополостные</button>
         </div>
+        <div class="filterbar" id="sortChips">
+          <button class="chip is-active" data-f="name" type="button">По имени</button>
+          <button class="chip" data-f="activity" type="button">Самые активные</button>
+          <button class="chip" data-f="rarity" type="button">Самые редкие</button>
+          <button class="chip" data-f="wow" type="button">Самые вау</button>
+        </div>
+        <p class="found" id="foundCount"></p>
 
         <div class="creatures" id="creatures"></div>
         <div class="empty" id="emptyBox" hidden>Такого в наших водах нет — попробуй «рифа» или «медузу».</div>
@@ -96,7 +103,10 @@
           <a href="zones.html">Зоны</a>
           <a href="route.html">Маршрут</a>
           <a href="tickets.html">Билеты</a>
-        </div>
+        
+          <a class="gap" href="quiz.html">Квиз «Кто ты»</a>
+          <a class="gap" href="journal.html">Дневник биолога</a>
+          <a class="gap" href="compare.html">Сравнить</a></div>
       </div>
       <div class="footer__meta">
         <span>Океанариум «Глубина»<i>/</i>[город]</span>

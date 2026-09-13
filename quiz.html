@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#eaf6f6">
-  <title>Маршрут — ГЛУБИНА</title>
-  <meta name="description" content="Маршрут по залам океанариума «Глубина»: от поверхности до бездны, с планом и чек-листом того, что нельзя пропустить.">
+  <title>Кто ты из Глубины — ГЛУБИНА</title>
+  <meta name="description" content="Пять вопросов океанариума «Глубина»: узнай, каким обитателем ты был бы в наших залах.">
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -40,55 +40,25 @@
   <main>
     <section class="pagehead">
       <div class="wrap">
-        <span class="label rv">Маршрут<i>/</i>сверху вниз, без разворотов</span>
-        <h1 class="h1 rv" data-d="1">Сорок минут <em>погружения</em></h1>
-        <p class="lead rv" data-d="2">Схема простая: вход — поверхность — риф — сумеречная зона — бездна — выход через кафетерий. Назад возвращаться не нужно.</p>
+        <span class="label rv">Квиз<i>/</i>пять вопросов</span>
+        <h1 class="h1 rv" data-d="1">Кем бы ты был <em>в наших залах?</em></h1>
+        <p class="lead rv" data-d="2">Отвечай честно — алгоритм подберёт обитателя, который живёт так же, как ты. Результат — полноценная карточка со шкалами.</p>
       </div>
     </section>
 
     <section class="sec tight">
       <div class="wrap">
-        <figure class="routeimg rv">
-          <img src="assets/route.png" alt="Схема залов: вход, четыре зоны глубин и выход через кафетерий">
-          <figcaption class="mapband__meta" style="border:none; border-top: 1.5px solid var(--line); padding: 14px 6px 4px;">
-            <span class="label">вход<i>/</i>первый этаж</span>
-            <span class="label">залы<i>/</i>по часовой стрелке</span>
-            <span class="label">выход<i>/</i>кафетерий</span>
-          </figcaption>
-        </figure>
-
-        <div class="sec__head" style="margin-top: 70px;">
-          <div>
-            <span class="label rv">Чек-лист<i>/</i>что не пропустить</span>
-            <h2 class="h2 rv" data-d="1">Три точки <em>и один секрет</em></h2>
-          </div>
+        <div class="quizwrap" id="quizRoot">
+          <div class="qdots" id="qDots"></div>
+          <div id="quizBody"></div>
         </div>
-        <div class="checklist">
-          <div class="check rv">
-            <span class="check__n">01</span>
-            <p>Кормление в 12:00 <span>зал «Риф»: очередь занимает десять минут, лучше прийти заранее</span></p>
-          </div>
-          <div class="check rv" data-d="1">
-            <span class="check__n">02</span>
-            <p>Тёмный коридор сумеречной зоны <span>глаза привыкают за две минуты — не торопись</span></p>
-          </div>
-          <div class="check rv" data-d="2">
-            <span class="check__n">03</span>
-            <p>Большое стекло бездны <span>самый большой аквариум: скаты проходят в двадцати сантиметрах</span></p>
-          </div>
-          <div class="check rv" data-d="3">
-            <span class="check__n">04</span>
-            <p>Кормления по часам <span>10:30 · 12:00 · 15:00 · 17:30 — расписание дублируется в залах</span></p>
-          </div>
-        </div>
-        <p class="footnote rv" data-d="4" style="margin-top: 24px;">Секрет<i>/</i>дежурный биолог у бездны отвечает на любые вопросы после 18:00</p>
       </div>
     </section>
 
-    <div class="ctaband" style="background: var(--deep); border-radius: var(--r) var(--r) 0 0;">
+    <div class="ctaband">
       <div class="wrap">
-        <h2 class="h2" style="color:#fff">Готов погружаться — <em style="color:var(--sand)">билет уже ждёт</em></h2>
-        <a class="btn btn--white" href="tickets.html"><span>К билетам</span><em class="btn__arrow">→</em></a>
+        <h2 class="rv">Познакомиться с результатом <em>можно вживую</em></h2>
+        <a class="btn btn--white rv" data-d="1" href="route.html"><span>Построить маршрут</span><em class="btn__arrow">→</em></a>
       </div>
     </div>
   </main>
@@ -110,8 +80,8 @@
           <h4>Разделы</h4>
           <a href="index.html">Сегодня</a>
           <a href="catalog.html">Каталог</a>
-          <a href="zones.html">Зоны</a>
-          <a href="about.html">О нас</a>
+          <a href="journal.html">Дневник биолога</a>
+          <a href="compare.html">Сравнить обитателей</a>
         
           <a class="gap" href="quiz.html">Квиз «Кто ты»</a>
           <a class="gap" href="journal.html">Дневник биолога</a>
