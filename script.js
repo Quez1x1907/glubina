@@ -62,6 +62,14 @@ $$('.rv').forEach((el) => {
   if (d !== undefined) el.style.setProperty('--d', d);
   rvIO.observe(el);
 });
+// контент, который появляется позже (рендер из данных), тоже должен раскрываться
+new MutationObserver((muts) => {
+  muts.forEach((m) => m.addedNodes.forEach((n) => {
+    if (n.nodeType !== 1) return;
+    if (n.classList && n.classList.contains('rv')) rvIO.observe(n);
+    if (n.querySelectorAll) n.querySelectorAll('.rv:not(.in)').forEach((el) => rvIO.observe(el));
+  }));
+}).observe(document.body, { childList: true, subtree: true });
 
 /* ---------- каталог: рендер + поиск + фильтры ---------- */
 
@@ -163,7 +171,7 @@ if (zonesRoot) {
   zonesRoot.innerHTML = Object.entries(D.zones).map(([key, z], i) => {
     const list = D.creatures.filter((c) => c.zone === key);
     return `
-      <div class="zone rv" data-d="${i}" style="--zc:${z.color}">
+      <div class="zone rv in" data-d="${i}" style="--zc:${z.color}">
         <div class="zone__badge">${i + 1}</div>
         <div class="zone__body">
           <h3>${z.name}</h3>
